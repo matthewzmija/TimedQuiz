@@ -1,0 +1,44 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 100%;
+  background-color: white;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+#view-highscores {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 12px;
+}
+
+#countdown-timer {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#home {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#begin {
+  background-color: #594376;
+  color: white;
+  width: auto;
+  border-radius: 10px;
+  height: 25px;
+}
