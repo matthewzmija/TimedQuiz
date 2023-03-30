@@ -4,27 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coding Quiz Challenge</title>
+    <title>Math Quiz</title>
     <link rel="stylesheet" href="/assets/style.css" />
   </head>
 
   <body>
     <header>
-      <section class="menu">
+      <section class="menu" data-state="visible">
         <a href="#" id="view-highscores" style="text-decoration: none"
           >View Highscores
         </a>
-        <p id="countdown-timer">Time:0</p>
+        <p id="countdown-timer">Time: 60</p>
       </section>
     </header>
-    <section id="home">
-      <h1>Coding Quiz Challenge</h1>
+    <section class="homepage" id="home" data-state="visible">
+      <h1>Simple Math Quiz</h1>
       <p>
-        Try to answer the following code related questions within the time
+        Try to answer the following math related questions within the time
         limit. Keep in mind that incorrect answers will penalize your score/time
         by 10 seconds!
       </p>
       <button id="begin">Begin Quiz</button>
     </section>
+    <section class="questions" id="question1" data-state="hidden">
+      <h1>What is 2 + 2?</h1>
+      <ol class="options" type="A">
+        <li class="choice">2</li>
+        <li class="choice">3</li>
+        <li class="choice">4</li>
+        <li class="choice">5</li>
+      </ol>
+    </section>
+    <section class="questions" id="question2" data-state="hidden">
+      <h1>What is 5 - 3?</h1>
+      <ol class="options" type="A">
+        <li class="choice">1</li>
+        <li class="choice">2</li>
+        <li class="choice">3</li>
+        <li class="choice">4</li>
+      </ol>
+    </section>
+    <section class="questions" id="question3" data-state="hidden">
+      <h1>What is 10 * 2?</h1>
+      <ol class="options" type="A">
+        <li class="choice">5</li>
+        <li class="choice">10</li>
+        <li class="choice">15</li>
+        <li class="choice">20</li>
+      </ol>
+    </section>
+    <section class="questions" id="question4" data-state="hidden">
+      <h1>What is 20 / 4?</h1>
+      <ol class="options" type="A">
+        <li class="choice">2</li>
+        <li class="choice">4</li>
+        <li class="choice">5</li>
+        <li class="choice">10</li>
+      </ol>
+    </section>
+    <section class="finish" data-state="hidden">
+      <h1>The Quiz has been completed!</h1>
+      <p id="final-score-display">Your final score is:</p>
+      <p>Enter your initals here</p>
+      <form>
+        <input id="textbox" type="text" />
+        <button id="submit">Submit</button>
+      </form>
+    </section>
+    <section class="highscore" data-state="hidden">
+      <h1>Highscores</h1>
+      <header>
+        <ol id="standings"></ol>
+      </header>
+      <div>
+        <button id="back">Go Back</button>
+        <button id="clear">Clear Highscore</button>
+      </div>
+    </section>
   </body>
+  <script src="/assets/script.js"></script>
 </html>
