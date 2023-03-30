@@ -1,3 +1,4 @@
+//Declaring global variables used in the script
 var beginQuizBtn = document.querySelector("#begin");
 var homepageEl = document.querySelector("#home");
 var countdownTimer = document.querySelector("#countdown-timer");
@@ -27,6 +28,7 @@ var countdownNumber = 60;
 var startInterval;
 var initialsInputStorage;
 
+//'Begin Quiz' button changing the screen and starting the test timer
 beginQuizBtn.addEventListener("click", function () {
   startCountdown();
   homepageEl.dataset.state = "hidden";
@@ -47,6 +49,8 @@ function startCountdown() {
     }
   }, 1000);
 }
+
+//Ensuring that after a choice has been made, the next question appears while confirming if the answer is right or wrong
 optionSelect.forEach(function (list) {
   list.addEventListener("click", function (event) {
     if (event.target.className === "choice") {
@@ -86,6 +90,7 @@ submitName.addEventListener("click", function (event) {
   displayHighscore();
 });
 
+//Function to store the test scores
 function validateLocalStorage() {
   if (JSON.parse(localStorage.getItem("Highscores")) == null) {
     highscoreDataList = [];
@@ -94,6 +99,7 @@ function validateLocalStorage() {
   }
 }
 
+//Function to display highscore standings
 function displayHighscore() {
   validateLocalStorage();
   for (let i = 0; i < highscoreDataList.length; i++) {
@@ -104,6 +110,7 @@ function displayHighscore() {
   }
 }
 
+//Ensuring that 'View Highscore', 'Go Back', and 'Clear Highscore' buttons respond accordingly
 viewHighscores.addEventListener("click", function () {
   finishQuiz.dataset.state = "hidden";
   question1El.dataset.state = "hidden";
